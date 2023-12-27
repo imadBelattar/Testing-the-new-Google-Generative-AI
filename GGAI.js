@@ -3,7 +3,7 @@ const fs = require("fs");
 require("dotenv").config();
 
 // Access your API key as an environment variable (see "Set up your API key" above)
-const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GENERATIVE_AI_API_KEY);
 
 // Converts local file information to a GoogleGenerativeAI.Part object.
 function fileToGenerativePart(path, mimeType) {
@@ -31,7 +31,7 @@ async function run() {
   const prompt = "what is the content of this picture";
 
   const imageParts = [
-    fileToGenerativePart("img/test.png", "image/png"),
+    fileToGenerativePart("img/Screenshot 2023-12-26 173606.png", "image/png"),
   ];
 
   // Insert 3 stars emoji before the "Running" message

@@ -35,26 +35,30 @@ async function generateContentFromImage(imagePath) {
 
 // Listen for incoming messages on the Telegram bot
 telegramBot.on("message", async (msg) => {
-  const chatId = msg.chat.id;
-  console.table(chat)
-  if(chatId != 1631515390){
-    telegramBot.sendMessage(chatId, "🖕🖕🖕 ser t9awed hhhh .");
-    return;
-  }
-  // Check if the message contains a photo
-  if (msg.photo) {
-    const fileId = msg.photo[msg.photo.length - 1].file_id;
-
-    // Get the file path for the image
-    const filePath = await telegramBot.downloadFile(fileId, "img");
-
-    // Generate content from the image
-    const generatedText = await generateContentFromImage(filePath);
-
-    // Send the generated text back to the user
-    telegramBot.sendMessage(chatId, generatedText);
-  } else {
-    // If the message does not contain a photo, prompt the user
-    telegramBot.sendMessage(chatId, "Please send an image with problem to solve 🌟🌟🌟.");
-  }
-});
+    const chatId = msg.chat.id;
+    const yourChatId = process.env.YOUR_CHAT_ID; // Replace with your actual chat ID
+  
+    // Check if the message is from your intended user
+    if (chatId !== yourChatId) {
+      telegramBot.sendMessage(chatId, "I'm sorry, but I'm not available for you.");
+      return;
+    }
+  
+    // Check if the message contains a photo
+    if (msg.photo) {
+      const fileId = msg.photo[msg.photo.length - 1].file_id;
+  
+      // Get the file path for the image
+      const filePath = await telegramBot.downloadFile(fileId, "img");
+  
+      // Generate content from the image
+      const generatedText = await generateContentFromImage(filePath);
+  
+      // Send the generated text back to the user
+      telegramBot.sendMessage(chatId, generatedText);
+    } else {
+      // If the message does not contain a photo, prompt the user
+      telegramBot.sendMessage(chatId, "Please send an image with a problem to solve. 🌟🌟🌟");
+    }
+  });
+  

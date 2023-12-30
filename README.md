@@ -29,8 +29,6 @@ This project leverages Google's Generative AI through the gemini-pro-vision mode
 
 # Part 2:
 # SendImage (Telegram bot for interacting with the AI)
-**Example Interaction:**
-![User Interaction](examples/conversation.png)
 ## Description
 
 ### Overview
@@ -63,6 +61,11 @@ This approach uses Google's Generative AI through the gemini-pro-vision model. T
    - Open your Telegram app.
    - Send an image message to the bot.
    - The bot will process the image using Google's Generative AI and respond with the generated content.
+
+
+4. **Example Interaction:**
+
+![User Interaction](examples/conversation.png)  
 
 **Note:** The bot is designed to accept only image messages, not text questions.
 

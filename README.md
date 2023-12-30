@@ -42,7 +42,7 @@ This approach uses Google's Generative AI through the gemini-pro-vision model. T
    - **Telegram Bot Token:**
      - Create a Telegram bot using the [BotFather](https://core.telegram.org/bots#botfather).
      - Set the bot token as an environment variable named `TELEGRAM_BOT_TOKEN` in the `.env` file we mentioned earlier.
-   - **Your Chat ID and Brother's Chat ID in Telegram:**
+   - **Your Chat ID and Brother's (I'm only allowing my little brother @Othmane to leverage the bot 😂) Chat ID in Telegram:**
      - Add your chat IDs as Telegram users to ensure only authorized users can access the bot.
 
    Example `.env` file:

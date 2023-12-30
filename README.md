@@ -29,7 +29,8 @@ This project leverages Google's Generative AI through the gemini-pro-vision mode
 
 # Part 2:
 # SendImage (Telegram bot for interacting with the AI)
-
+**Example Interaction:**
+![User Interaction](examples/conversation.png)
 ## Description
 
 ### Overview

@@ -8,6 +8,7 @@ This project leverages Google's Generative AI through the gemini-pro-vision mode
 
 - **GGAI.js:**
   The main script that orchestrates the interaction with Google's Generative AI. It includes functionality for generating content based on multimodal inputs.
+## please don't forget to create the 'img' folder, in order to upload images to it!!  
 
 - **package.json and package-lock.json:**
   These files define the Node.js project configuration, dependencies, and scripts. They ensure a consistent development environment for contributors.
